@@ -2,11 +2,8 @@
 
 ## Installation
 
-- Install Ansible
+- Install pip and Ansible
 - Ensure Apple's command line tools are installed
-- Clone this repository to your local drive
-- Updating OSX
-- Installing Xcode Command Line Tools
 - Run `ansible-playbook setup-my-mac.yml -i inventory -K` inside this directory. Enter your account password when prompted.
 
 All commands are listed in [install.sh](install.sh)
@@ -45,8 +42,6 @@ All commands are listed in [install.sh](install.sh)
 - vim
 - java
 - lanscan
-
-
 
 ### Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 

@@ -4,13 +4,13 @@
     name: "iterm2"
     state: present
     install_options: "appdir={{ homebrew_cask_appdir }}"
-    
+
 - name: Get current Solarized package
-  get_url: 
-    url: "http://ethanschoonover.com/solarized/files/solarized.zip" 
+  get_url:
+    url: "http://ethanschoonover.com/solarized/files/solarized.zip"
     dest: "~/Downloads/"
 
-# TODO instlla solarized dark on iTerm
+# TODO install solarized dark on iTerm
 
 - name: Cloning fonts
   git:
@@ -21,10 +21,10 @@
   become: no
 
 - name: Install Fonts
-  shell: ~/.config/powerlinefonts/install.sh 
-  args: 
+  shell: ~/.config/powerlinefonts/install.sh
+  args:
     chdir: '~/.config/powerlinefonts'
-  when: fontCloned|success
+  when: fontCloned is success
   become: no
 
 - name: iTerm custom settings file
@@ -36,10 +36,8 @@
 
 - name: Installing zsh package
   homebrew:
-    name: "{{ item }}"
+    name: ['zsh']
     state: present
-  with_items:
-    - zsh
 
 - name: Installing oh-my-zsh
   git:

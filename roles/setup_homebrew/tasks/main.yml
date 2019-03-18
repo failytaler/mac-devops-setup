@@ -1,7 +1,7 @@
 ---
 - name: Install OSX command line tools
   include: osx-commandline.yml
-  
+
 # Homebrew setup prerequisites.
 - name: Ensure Homebrew parent directory has correct permissions.
   file:
@@ -74,8 +74,7 @@
 
 # Brew.
 - name: Ensure configured homebrew packages are installed.
-  homebrew: "name={{ item }} state=present"
-  with_items: "{{ homebrew_installed_packages }}"
+  homebrew: "name={{ homebrew_installed_packages }} state=present"
 
 - name: Upgrade all homebrew packages (if configured).
   homebrew: update_homebrew=yes upgrade_all=yes

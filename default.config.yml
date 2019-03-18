@@ -32,19 +32,21 @@ homebrew_installed_packages:
   - knock
   - netcat
   - sshuttle
-  # - freetds
-
+  - awscli
+  - terraform
+  - vault
+  - tmux
 
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
-  - homebrew/dupes
-  - homebrew/versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - homebrew/cask-drivers/logitech-options
   - docker
   - dropbox
+  - 1password
   - google-chrome
   - handbrake
   - java
@@ -57,37 +59,33 @@ homebrew_cask_apps:
   - sourcetree
   - postman
   - atom
-  - intellij-idea
+  - cyberduck
+  - mountain-duck
   - qlcolorcode
   - qlstephen
   - qlmarkdown
   - quicklook-json
-  - qlprettypatch
-  - quicklook-csv
-  - betterzipql
   - qlimagesize
   - webpquicklook
+  - quicklookase
+  - qlvideo
   - suspicious-package
   - spotify
-  - evernote
   - postico
   - sequel-pro
-  - skype-for-business
-  - caffeine
   - visual-studio-code
   - go2shell
   - filezilla
-  #- microsoft-office
-  #- licecap
+  - skype
+  - viber
+  - telegram
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_app_ids:
-  - 425424353 # The Unarchiver (3.11.1)
-  - 425955336 # Skitch (2.8)
-  - 803453959 # Slack (2.4.1)
-  - 472226235 # LanScan (4.3)
-  - 443987910 # 1Password (6.5.3)
-  - 715768417 # Microsoft Remote Desktop (8.0.27246)
+  - 425424353 # The Unarchiver
+  - 441258766 # Magnet
+  - 803453959 # Slack
+  - 1295203466 # Microsoft Remote Desktop
 
 #mas_email: ""
 #mas_password: ""
